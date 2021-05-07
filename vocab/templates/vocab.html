@@ -81,6 +81,7 @@
             </div>
          </div>
          <br />
+         <p id="matches"> </p>
          <p id="response"> </p>
       </div>
     <script>
@@ -126,6 +127,7 @@
                       }
                       else if (matched && in_jumble) {
                         document.getElementById(text).style.textDecoration = "line-through";
+                        $("#matches").append(text + " ");
                       }
                       else if (!matched) {
                         $("#response").html(text + " isn't in the list of words");
